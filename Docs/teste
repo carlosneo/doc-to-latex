@@ -1,0 +1,22 @@
+<text:p P2> Fundamentos de Compiladores</text:p>
+<text:p SBC_3a_author_28_s_29_> Guilherme Fay</text:p>
+<text:p SBC_3a_institution> Instituto de Informática – Universidade Federal do Rio Grande do Sul UFRGS </text:p>
+<text:p SBC_3a_address> Caixa Postal 15.064 – 91.501-970 – Porto Alegre – RS – Brazil</text:p>
+
+<text:p SBC_3a_abstract> This meta-paper describes the style to be used in articles and short papers for SBC conferences. For papers in English, you should add just an abstract while for the papers in Portuguese, we also ask for an abstract in Portuguese (“resumo”). In both cases, abstracts should not have more than 10 lines and must be in the first page of the paper. </text:p>
+
+<text:p SBC_3a_resumo> Este meta-artigo descreve o estilo a ser usado na confecção de artigos e resumos de artigos para publicação nos anais das conferências organizadas pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos escritos em português. Artigos em inglês deverão apresentar apenas abstract. Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract) não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira página do artigo. </text:p>
+
+<text:h SBC_3a_title_3a_1>General Information</text:h>
+
+<text:p SBC_3a_paragraph_3a_first> All full papers and posters (short papers) submitted to some SBC conference, including any supporting documents, should be written in English or in Portuguese. The format paper should be A4 with single column, 3.5cm for upper margin, 2.5cm for bottom margin and 3.0cm for lateral margins, without headers or footers. The main font must be Times, 12 point nominal size, with 6 points of space before each paragraph. Page numbers must be suppressed. </text:p>
+
+<text:p SBC_3a_paragraph> Full papers must respect the page limits defined by the conference. Conferences that publish just abstracts ask for </text:p>
+
+-------------------
+
+
+<text:p text:style-name="SBC_3a_institution">Instituto de Informática – Universidade Federal do Rio Grande do Sul (UFRGS)</text:p>
+<text:p text:style-name="SBC_3a_address">Caixa Postal 15.064 – 91.501-970 – Porto Alegre – RS – Brazil</text:p>
+<text:h text:style-name="SBC_3a_title_3a_1" text:outline-level="1">General Information</text:h>
+<text:p text:style-name="SBC_3a_paragraph_3a_first">All full papers and posters (short papers) submitted to some SBC conference, including any supporting documents, should be written in English or in Portuguese. The format paper should be A4 with single column, 3.5cm for upper margin, 2.5cm for bottom margin and 3.0cm for lateral margins, without headers or footers. The main font must be Times, 12 point nominal size, with 6 points of space before each paragraph. Page numbers must be suppressed.</text:p>

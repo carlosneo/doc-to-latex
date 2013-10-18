@@ -1,0 +1,1684 @@
+Terminals which are not used
+
+   EMAIL
+   TABULACAO
+   PONTUACAO
+
+
+Rules never reduced
+
+   15 Title: /* empty */
+
+   18 Author: /* empty */
+
+   21 Institution: /* empty */
+
+   24 Address: /* empty */
+
+   27 Email: /* empty */
+
+   28 @5: /* empty */
+
+   30 Abstract: /* empty */
+
+   33 Resumo: /* empty */
+
+   36 Section: /* empty */
+
+   39 Subsection: /* empty */
+
+   42 Fparagraph: /* empty */
+
+   45 Oparagraph: /* empty */
+
+   48 AbrirFigure: /* empty */
+
+
+State 0 conflicts: 1 reduce/reduce
+State 23 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 37 conflicts: 1 shift/reduce
+State 49 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 65 conflicts: 5 reduce/reduce
+State 72 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 73 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 74 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 75 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 76 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 77 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 78 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 79 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 80 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 81 conflicts: 1 shift/reduce, 2 reduce/reduce
+State 82 conflicts: 1 shift/reduce, 2 reduce/reduce
+
+
+Grammar
+
+    0 $accept: Commands $end
+
+    1 Commands: Title
+    2         | Author
+    3         | Institution
+    4         | Address
+    5         | Email
+    6         | Abstract
+    7         | Resumo
+    8         | Section
+    9         | Subsection
+   10         | Fparagraph
+   11         | Oparagraph
+   12         | AbrirFigure
+   13         | Nada
+   14         | /* empty */
+
+   15 Title: /* empty */
+
+   16 @1: /* empty */
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG Texto FECHARTITLE @1 Commands
+
+   18 Author: /* empty */
+
+   19 @2: /* empty */
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG Texto FECHARTEXTO @2 Commands
+
+   21 Institution: /* empty */
+
+   22 @3: /* empty */
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG Texto FECHARTEXTO @3 Commands
+
+   24 Address: /* empty */
+
+   25 @4: /* empty */
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @4 Commands
+
+   27 Email: /* empty */
+
+   28 @5: /* empty */
+
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @5 Commands
+
+   30 Abstract: /* empty */
+
+   31 @6: /* empty */
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG Texto FECHARTEXTO @6 Commands
+
+   33 Resumo: /* empty */
+
+   34 @7: /* empty */
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG Texto FECHARTEXTO @7 Commands
+
+   36 Section: /* empty */
+
+   37 @8: /* empty */
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG Texto FECHARTEXTOH @8 Commands
+
+   39 Subsection: /* empty */
+
+   40 @9: /* empty */
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG Texto FECHARTEXTOH @9 Commands
+
+   42 Fparagraph: /* empty */
+
+   43 @10: /* empty */
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG Texto FECHARTEXTO @10 Commands
+
+   45 Oparagraph: /* empty */
+
+   46 @11: /* empty */
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG Texto FECHARTEXTO @11 Commands
+
+   48 AbrirFigure: /* empty */
+
+   49 @12: /* empty */
+
+   50 AbrirFigure: ABRIRFIGURE Texto FECHARFIGURE @12 Commands
+
+   51 @13: /* empty */
+
+   52 Texto: String @13 Texto
+   53      | /* empty */
+
+   54 @14: /* empty */
+
+   55 Nada: String @14 Commands Nada
+   56     | /* empty */
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+ABRIRTEXTO (258) 17 20 23 26 29 32 35 44 47
+STYLE (259) 17 20 23 26 29 32 35 38 41 44 47
+FECHARTEXTO (260) 20 23 26 29 32 35 44 47
+ABRIRTEXTOH (261) 38 41
+FECHARTEXTOH (262) 38 41
+TAG (263) 17 20 23 26 29 32 35 38 41 44 47
+TITLE (264) 17
+AUTHOR (265) 20
+INSTITUTION (266) 23
+ADDRESS (267) 26 29
+EMAIL (268)
+ABSTRACT (269) 32
+RESUMO (270) 35
+SECTION (271) 38
+SUBSECTION (272) 41
+FPARAGRAPH (273) 44
+OPARAGRAPH (274) 47
+ABRIRFIGURE (275) 50
+FECHARFIGURE (276) 50
+TABULACAO (277)
+PONTUACAO (278)
+String (279) 52 55
+FECHARTITLE (280) 17
+
+
+Nonterminals, with rules where they appear
+
+$accept (26)
+    on left: 0
+Commands (27)
+    on left: 1 2 3 4 5 6 7 8 9 10 11 12 13 14, on right: 0 17 20 23
+    26 29 32 35 38 41 44 47 50 55
+Title (28)
+    on left: 15 17, on right: 1
+@1 (29)
+    on left: 16, on right: 17
+Author (30)
+    on left: 18 20, on right: 2
+@2 (31)
+    on left: 19, on right: 20
+Institution (32)
+    on left: 21 23, on right: 3
+@3 (33)
+    on left: 22, on right: 23
+Address (34)
+    on left: 24 26, on right: 4
+@4 (35)
+    on left: 25, on right: 26
+Email (36)
+    on left: 27 29, on right: 5
+@5 (37)
+    on left: 28, on right: 29
+Abstract (38)
+    on left: 30 32, on right: 6
+@6 (39)
+    on left: 31, on right: 32
+Resumo (40)
+    on left: 33 35, on right: 7
+@7 (41)
+    on left: 34, on right: 35
+Section (42)
+    on left: 36 38, on right: 8
+@8 (43)
+    on left: 37, on right: 38
+Subsection (44)
+    on left: 39 41, on right: 9
+@9 (45)
+    on left: 40, on right: 41
+Fparagraph (46)
+    on left: 42 44, on right: 10
+@10 (47)
+    on left: 43, on right: 44
+Oparagraph (48)
+    on left: 45 47, on right: 11
+@11 (49)
+    on left: 46, on right: 47
+AbrirFigure (50)
+    on left: 48 50, on right: 12
+@12 (51)
+    on left: 49, on right: 50
+Texto (52)
+    on left: 52 53, on right: 17 20 23 26 29 32 35 38 41 44 47 50 52
+@13 (53)
+    on left: 51, on right: 52
+Nada (54)
+    on left: 55 56, on right: 13 55
+@14 (55)
+    on left: 54, on right: 55
+
+
+state 0
+
+    0 $accept: . Commands $end
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 5
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 1
+
+   17 Title: ABRIRTEXTO . STYLE TITLE TAG Texto FECHARTITLE @1 Commands
+   20 Author: ABRIRTEXTO . STYLE AUTHOR TAG Texto FECHARTEXTO @2 Commands
+   23 Institution: ABRIRTEXTO . STYLE INSTITUTION TAG Texto FECHARTEXTO @3 Commands
+   26 Address: ABRIRTEXTO . STYLE ADDRESS TAG Texto FECHARTEXTO @4 Commands
+   29 Email: ABRIRTEXTO . STYLE ADDRESS TAG Texto FECHARTEXTO @5 Commands
+   32 Abstract: ABRIRTEXTO . STYLE ABSTRACT TAG Texto FECHARTEXTO @6 Commands
+   35 Resumo: ABRIRTEXTO . STYLE RESUMO TAG Texto FECHARTEXTO @7 Commands
+   44 Fparagraph: ABRIRTEXTO . STYLE FPARAGRAPH TAG Texto FECHARTEXTO @10 Commands
+   47 Oparagraph: ABRIRTEXTO . STYLE OPARAGRAPH TAG Texto FECHARTEXTO @11 Commands
+
+    STYLE  shift, and go to state 19
+
+
+state 2
+
+   38 Section: ABRIRTEXTOH . STYLE SECTION TAG Texto FECHARTEXTOH @8 Commands
+   41 Subsection: ABRIRTEXTOH . STYLE SUBSECTION TAG Texto FECHARTEXTOH @9 Commands
+
+    STYLE  shift, and go to state 20
+
+
+state 3
+
+   50 AbrirFigure: ABRIRFIGURE . Texto FECHARFIGURE @12 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 22
+
+
+state 4
+
+   55 Nada: String . @14 Commands Nada
+
+    $default  reduce using rule 54 (@14)
+
+    @14  go to state 23
+
+
+state 5
+
+    0 $accept: Commands . $end
+
+    $end  shift, and go to state 24
+
+
+state 6
+
+    1 Commands: Title .
+
+    $default  reduce using rule 1 (Commands)
+
+
+state 7
+
+    2 Commands: Author .
+
+    $default  reduce using rule 2 (Commands)
+
+
+state 8
+
+    3 Commands: Institution .
+
+    $default  reduce using rule 3 (Commands)
+
+
+state 9
+
+    4 Commands: Address .
+
+    $default  reduce using rule 4 (Commands)
+
+
+state 10
+
+    5 Commands: Email .
+
+    $default  reduce using rule 5 (Commands)
+
+
+state 11
+
+    6 Commands: Abstract .
+
+    $default  reduce using rule 6 (Commands)
+
+
+state 12
+
+    7 Commands: Resumo .
+
+    $default  reduce using rule 7 (Commands)
+
+
+state 13
+
+    8 Commands: Section .
+
+    $default  reduce using rule 8 (Commands)
+
+
+state 14
+
+    9 Commands: Subsection .
+
+    $default  reduce using rule 9 (Commands)
+
+
+state 15
+
+   10 Commands: Fparagraph .
+
+    $default  reduce using rule 10 (Commands)
+
+
+state 16
+
+   11 Commands: Oparagraph .
+
+    $default  reduce using rule 11 (Commands)
+
+
+state 17
+
+   12 Commands: AbrirFigure .
+
+    $default  reduce using rule 12 (Commands)
+
+
+state 18
+
+   13 Commands: Nada .
+
+    $default  reduce using rule 13 (Commands)
+
+
+state 19
+
+   17 Title: ABRIRTEXTO STYLE . TITLE TAG Texto FECHARTITLE @1 Commands
+   20 Author: ABRIRTEXTO STYLE . AUTHOR TAG Texto FECHARTEXTO @2 Commands
+   23 Institution: ABRIRTEXTO STYLE . INSTITUTION TAG Texto FECHARTEXTO @3 Commands
+   26 Address: ABRIRTEXTO STYLE . ADDRESS TAG Texto FECHARTEXTO @4 Commands
+   29 Email: ABRIRTEXTO STYLE . ADDRESS TAG Texto FECHARTEXTO @5 Commands
+   32 Abstract: ABRIRTEXTO STYLE . ABSTRACT TAG Texto FECHARTEXTO @6 Commands
+   35 Resumo: ABRIRTEXTO STYLE . RESUMO TAG Texto FECHARTEXTO @7 Commands
+   44 Fparagraph: ABRIRTEXTO STYLE . FPARAGRAPH TAG Texto FECHARTEXTO @10 Commands
+   47 Oparagraph: ABRIRTEXTO STYLE . OPARAGRAPH TAG Texto FECHARTEXTO @11 Commands
+
+    TITLE        shift, and go to state 25
+    AUTHOR       shift, and go to state 26
+    INSTITUTION  shift, and go to state 27
+    ADDRESS      shift, and go to state 28
+    ABSTRACT     shift, and go to state 29
+    RESUMO       shift, and go to state 30
+    FPARAGRAPH   shift, and go to state 31
+    OPARAGRAPH   shift, and go to state 32
+
+
+state 20
+
+   38 Section: ABRIRTEXTOH STYLE . SECTION TAG Texto FECHARTEXTOH @8 Commands
+   41 Subsection: ABRIRTEXTOH STYLE . SUBSECTION TAG Texto FECHARTEXTOH @9 Commands
+
+    SECTION     shift, and go to state 33
+    SUBSECTION  shift, and go to state 34
+
+
+state 21
+
+   52 Texto: String . @13 Texto
+
+    $default  reduce using rule 51 (@13)
+
+    @13  go to state 35
+
+
+state 22
+
+   50 AbrirFigure: ABRIRFIGURE Texto . FECHARFIGURE @12 Commands
+
+    FECHARFIGURE  shift, and go to state 36
+
+
+state 23
+
+   55 Nada: String @14 . Commands Nada
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 37
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 24
+
+    0 $accept: Commands $end .
+
+    $default  accept
+
+
+state 25
+
+   17 Title: ABRIRTEXTO STYLE TITLE . TAG Texto FECHARTITLE @1 Commands
+
+    TAG  shift, and go to state 38
+
+
+state 26
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR . TAG Texto FECHARTEXTO @2 Commands
+
+    TAG  shift, and go to state 39
+
+
+state 27
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION . TAG Texto FECHARTEXTO @3 Commands
+
+    TAG  shift, and go to state 40
+
+
+state 28
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS . TAG Texto FECHARTEXTO @4 Commands
+   29 Email: ABRIRTEXTO STYLE ADDRESS . TAG Texto FECHARTEXTO @5 Commands
+
+    TAG  shift, and go to state 41
+
+
+state 29
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT . TAG Texto FECHARTEXTO @6 Commands
+
+    TAG  shift, and go to state 42
+
+
+state 30
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO . TAG Texto FECHARTEXTO @7 Commands
+
+    TAG  shift, and go to state 43
+
+
+state 31
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH . TAG Texto FECHARTEXTO @10 Commands
+
+    TAG  shift, and go to state 44
+
+
+state 32
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH . TAG Texto FECHARTEXTO @11 Commands
+
+    TAG  shift, and go to state 45
+
+
+state 33
+
+   38 Section: ABRIRTEXTOH STYLE SECTION . TAG Texto FECHARTEXTOH @8 Commands
+
+    TAG  shift, and go to state 46
+
+
+state 34
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION . TAG Texto FECHARTEXTOH @9 Commands
+
+    TAG  shift, and go to state 47
+
+
+state 35
+
+   52 Texto: String @13 . Texto
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 48
+
+
+state 36
+
+   50 AbrirFigure: ABRIRFIGURE Texto FECHARFIGURE . @12 Commands
+
+    $default  reduce using rule 49 (@12)
+
+    @12  go to state 49
+
+
+state 37
+
+   55 Nada: String @14 Commands . Nada
+
+    String  shift, and go to state 4
+
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 56 (Nada)
+
+    Nada  go to state 50
+
+
+state 38
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG . Texto FECHARTITLE @1 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 51
+
+
+state 39
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG . Texto FECHARTEXTO @2 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 52
+
+
+state 40
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG . Texto FECHARTEXTO @3 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 53
+
+
+state 41
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG . Texto FECHARTEXTO @4 Commands
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG . Texto FECHARTEXTO @5 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 54
+
+
+state 42
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG . Texto FECHARTEXTO @6 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 55
+
+
+state 43
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG . Texto FECHARTEXTO @7 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 56
+
+
+state 44
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG . Texto FECHARTEXTO @10 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 57
+
+
+state 45
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG . Texto FECHARTEXTO @11 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 58
+
+
+state 46
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG . Texto FECHARTEXTOH @8 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 59
+
+
+state 47
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG . Texto FECHARTEXTOH @9 Commands
+
+    String  shift, and go to state 21
+
+    $default  reduce using rule 53 (Texto)
+
+    Texto  go to state 60
+
+
+state 48
+
+   52 Texto: String @13 Texto .
+
+    $default  reduce using rule 52 (Texto)
+
+
+state 49
+
+   50 AbrirFigure: ABRIRFIGURE Texto FECHARFIGURE @12 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 61
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 50
+
+   55 Nada: String @14 Commands Nada .
+
+    $default  reduce using rule 55 (Nada)
+
+
+state 51
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG Texto . FECHARTITLE @1 Commands
+
+    FECHARTITLE  shift, and go to state 62
+
+
+state 52
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG Texto . FECHARTEXTO @2 Commands
+
+    FECHARTEXTO  shift, and go to state 63
+
+
+state 53
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG Texto . FECHARTEXTO @3 Commands
+
+    FECHARTEXTO  shift, and go to state 64
+
+
+state 54
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG Texto . FECHARTEXTO @4 Commands
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG Texto . FECHARTEXTO @5 Commands
+
+    FECHARTEXTO  shift, and go to state 65
+
+
+state 55
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG Texto . FECHARTEXTO @6 Commands
+
+    FECHARTEXTO  shift, and go to state 66
+
+
+state 56
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG Texto . FECHARTEXTO @7 Commands
+
+    FECHARTEXTO  shift, and go to state 67
+
+
+state 57
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG Texto . FECHARTEXTO @10 Commands
+
+    FECHARTEXTO  shift, and go to state 68
+
+
+state 58
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG Texto . FECHARTEXTO @11 Commands
+
+    FECHARTEXTO  shift, and go to state 69
+
+
+state 59
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG Texto . FECHARTEXTOH @8 Commands
+
+    FECHARTEXTOH  shift, and go to state 70
+
+
+state 60
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG Texto . FECHARTEXTOH @9 Commands
+
+    FECHARTEXTOH  shift, and go to state 71
+
+
+state 61
+
+   50 AbrirFigure: ABRIRFIGURE Texto FECHARFIGURE @12 Commands .
+
+    $default  reduce using rule 50 (AbrirFigure)
+
+
+state 62
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG Texto FECHARTITLE . @1 Commands
+
+    $default  reduce using rule 16 (@1)
+
+    @1  go to state 72
+
+
+state 63
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG Texto FECHARTEXTO . @2 Commands
+
+    $default  reduce using rule 19 (@2)
+
+    @2  go to state 73
+
+
+state 64
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG Texto FECHARTEXTO . @3 Commands
+
+    $default  reduce using rule 22 (@3)
+
+    @3  go to state 74
+
+
+state 65
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO . @4 Commands
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO . @5 Commands
+
+    $end         reduce using rule 25 (@4)
+    $end         [reduce using rule 28 (@5)]
+    ABRIRTEXTO   reduce using rule 25 (@4)
+    ABRIRTEXTO   [reduce using rule 28 (@5)]
+    ABRIRTEXTOH  reduce using rule 25 (@4)
+    ABRIRTEXTOH  [reduce using rule 28 (@5)]
+    ABRIRFIGURE  reduce using rule 25 (@4)
+    ABRIRFIGURE  [reduce using rule 28 (@5)]
+    String       reduce using rule 25 (@4)
+    String       [reduce using rule 28 (@5)]
+    $default     reduce using rule 25 (@4)
+
+    @4  go to state 75
+    @5  go to state 76
+
+
+state 66
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG Texto FECHARTEXTO . @6 Commands
+
+    $default  reduce using rule 31 (@6)
+
+    @6  go to state 77
+
+
+state 67
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG Texto FECHARTEXTO . @7 Commands
+
+    $default  reduce using rule 34 (@7)
+
+    @7  go to state 78
+
+
+state 68
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG Texto FECHARTEXTO . @10 Commands
+
+    $default  reduce using rule 43 (@10)
+
+    @10  go to state 79
+
+
+state 69
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG Texto FECHARTEXTO . @11 Commands
+
+    $default  reduce using rule 46 (@11)
+
+    @11  go to state 80
+
+
+state 70
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG Texto FECHARTEXTOH . @8 Commands
+
+    $default  reduce using rule 37 (@8)
+
+    @8  go to state 81
+
+
+state 71
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG Texto FECHARTEXTOH . @9 Commands
+
+    $default  reduce using rule 40 (@9)
+
+    @9  go to state 82
+
+
+state 72
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG Texto FECHARTITLE @1 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 83
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 73
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG Texto FECHARTEXTO @2 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 84
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 74
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG Texto FECHARTEXTO @3 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 85
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 75
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @4 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 86
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 76
+
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @5 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 87
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 77
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG Texto FECHARTEXTO @6 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 88
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 78
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG Texto FECHARTEXTO @7 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 89
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 79
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG Texto FECHARTEXTO @10 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 90
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 80
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG Texto FECHARTEXTO @11 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 91
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 81
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG Texto FECHARTEXTOH @8 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 92
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 82
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG Texto FECHARTEXTOH @9 . Commands
+
+    ABRIRTEXTO   shift, and go to state 1
+    ABRIRTEXTOH  shift, and go to state 2
+    ABRIRFIGURE  shift, and go to state 3
+    String       shift, and go to state 4
+
+    $end      reduce using rule 14 (Commands)
+    $end      [reduce using rule 15 (Title)]
+    $end      [reduce using rule 18 (Author)]
+    $end      [reduce using rule 21 (Institution)]
+    $end      [reduce using rule 24 (Address)]
+    $end      [reduce using rule 27 (Email)]
+    $end      [reduce using rule 30 (Abstract)]
+    $end      [reduce using rule 33 (Resumo)]
+    $end      [reduce using rule 36 (Section)]
+    $end      [reduce using rule 39 (Subsection)]
+    $end      [reduce using rule 42 (Fparagraph)]
+    $end      [reduce using rule 45 (Oparagraph)]
+    $end      [reduce using rule 48 (AbrirFigure)]
+    $end      [reduce using rule 56 (Nada)]
+    String    [reduce using rule 14 (Commands)]
+    String    [reduce using rule 15 (Title)]
+    String    [reduce using rule 18 (Author)]
+    String    [reduce using rule 21 (Institution)]
+    String    [reduce using rule 24 (Address)]
+    String    [reduce using rule 27 (Email)]
+    String    [reduce using rule 30 (Abstract)]
+    String    [reduce using rule 33 (Resumo)]
+    String    [reduce using rule 36 (Section)]
+    String    [reduce using rule 39 (Subsection)]
+    String    [reduce using rule 42 (Fparagraph)]
+    String    [reduce using rule 45 (Oparagraph)]
+    String    [reduce using rule 48 (AbrirFigure)]
+    String    [reduce using rule 56 (Nada)]
+    $default  reduce using rule 14 (Commands)
+
+    Commands     go to state 93
+    Title        go to state 6
+    Author       go to state 7
+    Institution  go to state 8
+    Address      go to state 9
+    Email        go to state 10
+    Abstract     go to state 11
+    Resumo       go to state 12
+    Section      go to state 13
+    Subsection   go to state 14
+    Fparagraph   go to state 15
+    Oparagraph   go to state 16
+    AbrirFigure  go to state 17
+    Nada         go to state 18
+
+
+state 83
+
+   17 Title: ABRIRTEXTO STYLE TITLE TAG Texto FECHARTITLE @1 Commands .
+
+    $default  reduce using rule 17 (Title)
+
+
+state 84
+
+   20 Author: ABRIRTEXTO STYLE AUTHOR TAG Texto FECHARTEXTO @2 Commands .
+
+    $default  reduce using rule 20 (Author)
+
+
+state 85
+
+   23 Institution: ABRIRTEXTO STYLE INSTITUTION TAG Texto FECHARTEXTO @3 Commands .
+
+    $default  reduce using rule 23 (Institution)
+
+
+state 86
+
+   26 Address: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @4 Commands .
+
+    $default  reduce using rule 26 (Address)
+
+
+state 87
+
+   29 Email: ABRIRTEXTO STYLE ADDRESS TAG Texto FECHARTEXTO @5 Commands .
+
+    $default  reduce using rule 29 (Email)
+
+
+state 88
+
+   32 Abstract: ABRIRTEXTO STYLE ABSTRACT TAG Texto FECHARTEXTO @6 Commands .
+
+    $default  reduce using rule 32 (Abstract)
+
+
+state 89
+
+   35 Resumo: ABRIRTEXTO STYLE RESUMO TAG Texto FECHARTEXTO @7 Commands .
+
+    $default  reduce using rule 35 (Resumo)
+
+
+state 90
+
+   44 Fparagraph: ABRIRTEXTO STYLE FPARAGRAPH TAG Texto FECHARTEXTO @10 Commands .
+
+    $default  reduce using rule 44 (Fparagraph)
+
+
+state 91
+
+   47 Oparagraph: ABRIRTEXTO STYLE OPARAGRAPH TAG Texto FECHARTEXTO @11 Commands .
+
+    $default  reduce using rule 47 (Oparagraph)
+
+
+state 92
+
+   38 Section: ABRIRTEXTOH STYLE SECTION TAG Texto FECHARTEXTOH @8 Commands .
+
+    $default  reduce using rule 38 (Section)
+
+
+state 93
+
+   41 Subsection: ABRIRTEXTOH STYLE SUBSECTION TAG Texto FECHARTEXTOH @9 Commands .
+
+    $default  reduce using rule 41 (Subsection)
